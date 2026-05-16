@@ -1,0 +1,19 @@
+{
+  "name": "trab-aula11-login-e2e",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "backend:start": "npm run start --workspace=backend",
+    "frontend:dev": "npm run dev --workspace=frontend",
+    "frontend:build": "npm run build --workspace=frontend",
+    "frontend:preview": "npm run preview --workspace=frontend",
+    "cypress": "node ./scripts/cypress-cli.mjs",
+    "cypress:open": "npm run cypress:open --workspace=frontend",
+    "cypress:run": "npm run cypress:run --workspace=frontend",
+    "test:e2e": "npm run frontend:build && node scripts/run-e2e.mjs"
+  },
+  "devDependencies": {
+    "kill-port": "^2.0.1",
+    "tree-kill": "^1.2.2"
+  }
+}
